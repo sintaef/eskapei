@@ -21,39 +21,40 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="{{ url('/home') }}">ESKAPEI</a>
+    <a class="navbar-brand" href="{{ url('/index_pdiii') }}">ESKAPEI</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="{{ url('/home') }}">
+          <a class="nav-link" href="{{ url('/index_pdiii') }}">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profil">
-          <a class="nav-link" href="{{ url('/profil_tkemahasiswaan') }}">
+          <a class="nav-link" href="{{ url('/profil_pdiii') }}">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Profil</span>
           </a>
         </li>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Softskill">
-          <a class="nav-link" href="{{ url('/softskill_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+          <a class="nav-link" href="{{ url('/softskill_pdiii') }}">
+            <i class="fa fa-fw fa-book"></i>
             <span class="nav-link-text">Softskill</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kegiatan">
-          <a class="nav-link" href="{{ url('/kegiatan_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+          <a class="nav-link" href="{{ url('/kegiatan_pdiii') }}">
+            <i class="fa fa-fw fa-book"></i>
             <span class="nav-link-text">Kegiatan</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Penilaian">
-          <a class="nav-link" href="{{ url('/penilaian_tkemahasiswaan') }}">
+          <a class="nav-link" href="{{ url('/penilaian_pdiii') }}">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Penilaian</span>
           </a>
@@ -67,8 +68,6 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        
-        
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
@@ -81,14 +80,147 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="#">Profil</a>
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active">Data Diri</li>
       </ol>
     
       <div class="card mb-3">
         <div class="card-header">
-          Selamat Datang</div>
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr><td width="500">
+                <b>INFORMASI PEMBANTU DEKAN III
+                </b>
+              </td>
+              <td width="8">
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <button name="editprofil" id="editprofil" class="btn btn-primary" type="button">Edit</button>        </td>
+            </tr>
+            <tr><td width="150">
+                &nbsp;
+              </td>
+              <td width="8">
+              </td>
+              <td>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr><td width="150">
+                <b>NIP
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>.................</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>Jabatan
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>.................</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>IDENTITAS DIRI
+                </b>
+              </td>
+              <td width="8">
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr><td width="150">
+                &nbsp;
+              </td>
+              <td width="8">
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>Nama
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>..................</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>No. Telp
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>..................</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>Email
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>....................</b></td>
+            </tr>
+            <tr><td width="150">
+                <b>Kota Lahir
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>......................</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>Tanggal Lahir
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>..........</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>Jenis Kelamin
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>..........</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+                <b>Alamat
+                </b>
+              </td>
+              <td width="8">:
+              </td>
+              <td><b>..................</b>
+              </td>
+            </tr>
+            <tr><td width="150">
+              </td>
+              <td width="8">
+              </td>
+              <td><b>............</b>
+              </td>
+            </tr>
+
+            </tbody>
+          </table></div>
        
     </div>
     <!-- /.container-fluid-->

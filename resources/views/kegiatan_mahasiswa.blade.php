@@ -21,43 +21,46 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="{{ url('/home') }}">ESKAPEI</a>
+    <a class="navbar-brand" href="{{ url('/index_mahasiswa') }}">ESKAPEI</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="{{ url('/home') }}">
+          <a class="nav-link" href="{{ url('/index_mahasiswa') }}">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profil">
-          <a class="nav-link" href="{{ url('/profil_tkemahasiswaan') }}">
+          <a class="nav-link" href="{{ url('/profil_mahasiswa') }}">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Profil</span>
           </a>
         </li>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Softskill">
-          <a class="nav-link" href="{{ url('/softskill_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+          <a class="nav-link" href="{{ url('/softskill_mahasiswa') }}">
+            <i class="fa fa-fw fa-book"></i>
             <span class="nav-link-text">Softskill</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kegiatan">
-          <a class="nav-link" href="{{ url('/kegiatan_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+          <a class="nav-link" href="{{ url('/kegiatan_mahasiswa') }}">
+            <i class="fa fa-fw fa-book"></i>
             <span class="nav-link-text">Kegiatan</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Penilaian">
-          <a class="nav-link" href="{{ url('/penilaian_tkemahasiswaan') }}">
+          <a class="nav-link" href="{{ url('/penilaian_mahasiswa') }}">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Penilaian</span>
           </a>
         </li>
+        
+      <!--punya logout-->  
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -66,9 +69,7 @@
           </a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
-        
-        
+      <ul class="navbar-nav ml-auto">   
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
@@ -81,14 +82,43 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="{{url('/kegiatan_tkemahasiswaan')}}">Kegiatan</a>
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active"></li>
       </ol>
-    
+
       <div class="card mb-3">
         <div class="card-header">
-          Selamat Datang</div>
+          <i class="fa fa-table"></i> Data Kegiatan </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Bidang Kegiatan</th>
+                  <th>Nama Kegiatan</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Bidang Kegiatan</th>
+                  <th>Nama Kegiatan</th>
+                </tr>
+              </tfoot>
+              <tbody>
+              @foreach($bidangkegiatan as $value)
+                <tr>
+                  <td>{{$value->bidang}}</td>
+                  <td>{{$value->namakegiatan}}</td>
+                </tr>
+              @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted"></div>
+      </div>
+    </div>
        
     </div>
     <!-- /.container-fluid-->

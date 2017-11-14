@@ -21,14 +21,14 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="{{ url('/home') }}">ESKAPEI</a>
+    <a class="navbar-brand" href="{{ url('/index_tkemahasiswaan') }}">ESKAPEI</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="{{ url('/home') }}">
+          <a class="nav-link" href="{{ url('/index_tkemahasiswaan') }}">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
@@ -42,13 +42,13 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Softskill">
           <a class="nav-link" href="{{ url('/softskill_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+            <i class="fa fa-fw fa-files-o"></i>
             <span class="nav-link-text">Softskill</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kegiatan">
           <a class="nav-link" href="{{ url('/kegiatan_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+            <i class="fa fa-fw fa-files-o"></i>
             <span class="nav-link-text">Kegiatan</span>
           </a>
         </li>

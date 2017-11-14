@@ -33,6 +33,7 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profil">
           <a class="nav-link" href="{{ url('/profil_tkemahasiswaan') }}">
             <i class="fa fa-fw fa-address-book"></i>
@@ -42,13 +43,13 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Softskill">
           <a class="nav-link" href="{{ url('/softskill_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+            <i class="fa fa-fw fa-files-o"></i>
             <span class="nav-link-text">Softskill</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kegiatan">
           <a class="nav-link" href="{{ url('/kegiatan_tkemahasiswaan') }}">
-            <i class="fa fa-fw fa-file"></i>
+            <i class="fa fa-fw fa-files-o"></i>
             <span class="nav-link-text">Kegiatan</span>
           </a>
         </li>
@@ -58,6 +59,8 @@
             <span class="nav-link-text">Penilaian</span>
           </a>
         </li>
+        
+      <!--punya logout-->  
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -66,9 +69,7 @@
           </a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
-        
-        
+      <ul class="navbar-nav ml-auto">   
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
@@ -81,14 +82,43 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="{{url('/softskill_tkemahasiswaan')}}">Softskill</a>
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active">Edit Softskill</li>
       </ol>
-    
-      <div class="card mb-3">
-        <div class="card-header">
-          Selamat Datang</div>
+      <div class="card-body">
+        <form method="POST" action="/update-softskill/{{$ss->id_softskill}}">
+
+          <div class="form-group" >
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  {!! csrf_field() !!}
+                  <label>Softskill</label>
+                  <input value="{{$ss->softskill}}" class="form-control" type="text" name="softskill" required>
+                </div>
+                <div class="form-group">
+                  <label>Deskripsi</label>
+                  <input value="{{$ss->Deskripsi}}" class="form-control"type="text" name="deskripsi" required>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-6 col-md-offset-4">
+                    <button type="submit" class="btn btn-primary">
+                      Simpan
+                    </button>
+                    <a href="/softskill_tkemahasiswaan" type="submit" class="btn btn-secondary">
+                      Batal
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="card-footer small text-muted"></div>
+      </div>
+    </div>
        
     </div>
     <!-- /.container-fluid-->
