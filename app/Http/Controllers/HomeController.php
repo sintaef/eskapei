@@ -25,4 +25,19 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function index_tkemahasiswaan()
+    {
+        return view('index_tkemahasiswaan');
+    }
+
+    public function index_mahasiswa()
+    {
+        return view('index_mahasiswa');
+    }
+
+    public function index_pdiii()
+    {
+        return view('index_pdiii');
+    }
 }
